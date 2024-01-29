@@ -14,4 +14,8 @@ This is the first .srt file I generated for one of my portfolio videos.
 
 ## Part 2 - Extracting the audio from your video file
 
-It's worth noting that the larger your video file
+It's worth noting that the larger your video file the longer it would take for the 
+caption generator to create them.
+
+That's why I've added a video to audio extraction part of my script to help you quicken the whole process.
+You can comment it out if not needed.
