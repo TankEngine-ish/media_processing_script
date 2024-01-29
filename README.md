@@ -10,7 +10,7 @@ how accurate it is in extracting the words from a voice with heavy accent like m
 
 This is the first .srt file I generated for one of my portfolio videos.
 
-![Alt text](<Test_videos/Screenshot from 2024-01-29 17-05-18.png>)
+![Alt text](<Images/Screenshot from 2024-01-29 17-05-18.png>)
 
 ## Part 2 - Extracting the audio from your video file
 
