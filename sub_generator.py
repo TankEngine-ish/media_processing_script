@@ -1,10 +1,9 @@
 import assemblyai as aai
 import subprocess
 
-aai.settings.api_key = "b1fa440650424dd494a560c99dfc8a21" 
+aai.settings.api_key = "<your API key from Assembly AI>" 
 
-## Extract audio from video file
-
+## Extract audio from video file section
 
 def convert_video_to_audio(input_video, output_audio):
     ffmpeg_cmd = [
@@ -17,7 +16,11 @@ def convert_video_to_audio(input_video, output_audio):
         "-y",
         output_audio
     ]
-
+    
+    # the above options are for the output audio's quality such as bitrate,
+    # sample rate, codec, etc. You can change them as needed.
+    
+    
     try:
         subprocess.run(ffmpeg_cmd, check=True)
         print("Video converted to audio successfully")
@@ -25,17 +28,17 @@ def convert_video_to_audio(input_video, output_audio):
         print("Converting video to audio failed")
 
 
-
-convert_video_to_audio("./Test_videos/LAMP_Stack.mov", "./Test_videos/LAMP_Stack.mp3")
-
+convert_video_to_audio("<path to your video>", "<path to your audio file>")
 
 
 
-## Transcribe the audio file
+## Transcribe the audio file section
  
-transcript = aai.Transcriber().transcribe("./Test_videos/LAMP_Stack.mp3")
+transcript = aai.Transcriber().transcribe("<path to your audio file>")
 
 subtitles = transcript.export_subtitles_srt(chars_per_caption=85)
+
+# between 80 and 100 characters per caption is recommended
 
 f = open("subtitles.srt", "w")
 
