@@ -1,4 +1,4 @@
-# Python_Subtitle_Generator
+# Media Processing Script
 
 
 ## Part 1 - Generating captions for your video

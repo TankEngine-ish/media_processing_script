@@ -1,0 +1,164 @@
+1
+00:00:12,170 --> 00:00:16,602
+Well, so I had a task of deploying this ecommerce
+
+2
+00:00:16,666 --> 00:00:20,254
+website, but I've decided to make it a bit more interesting and
+
+3
+00:00:20,292 --> 00:00:24,046
+do it from the Oracle Virtualbox manager with the
+
+4
+00:00:24,068 --> 00:00:28,050
+help of vagrant and a virtual image of Sentos
+
+5
+00:00:28,130 --> 00:00:31,970
+nine. As you can see, I've already sshed
+
+6
+00:00:32,130 --> 00:00:34,930
+from my Ubuntu to the virtual Centos.
+
+7
+00:00:35,090 --> 00:00:38,760
+I've also configured my Vs code,
+
+8
+00:00:39,130 --> 00:00:42,390
+it's SH from my Ubuntu to Sentos.
+
+9
+00:00:42,990 --> 00:00:46,774
+I began with configuring firewall D, which is a dynamic
+
+10
+00:00:46,822 --> 00:00:50,546
+firewall management tool. It's a high level device that abstracts
+
+11
+00:00:50,598 --> 00:00:55,018
+away the manual manipulating of iptables.
+
+12
+00:00:55,114 --> 00:00:58,720
+I've used it to split the traffic into
+
+13
+00:00:59,330 --> 00:01:03,506
+let me just show you here so you
+
+14
+00:01:03,528 --> 00:01:07,486
+can see the 3306. It's the default
+
+15
+00:01:07,598 --> 00:01:12,318
+port number for the SQL database. In our case it's MariaDB.
+
+16
+00:01:12,494 --> 00:01:15,826
+And I've created another port which
+
+17
+00:01:15,848 --> 00:01:19,830
+is for the HTP to traffic. The default number is
+
+18
+00:01:19,900 --> 00:01:23,714
+80. After that I proceeded
+
+19
+00:01:23,762 --> 00:01:27,342
+with installing MariaDB. Then I created
+
+20
+00:01:27,506 --> 00:01:30,330
+a database by the name of ecomdb.
+
+21
+00:01:30,750 --> 00:01:34,410
+I run this script over here,
+
+22
+00:01:34,480 --> 00:01:37,754
+this SQL script. Then I've installed the
+
+23
+00:01:37,792 --> 00:01:41,582
+Apache HTTP server. As you can see
+
+24
+00:01:41,636 --> 00:01:45,194
+it's active running. One important thing when configuring
+
+25
+00:01:45,242 --> 00:01:48,702
+the Apache HTTP server is let me just show you, it's to
+
+26
+00:01:48,756 --> 00:01:52,778
+change the default directory index from index HTML
+
+27
+00:01:52,874 --> 00:01:56,402
+to index PhP as it's in our case it's the
+
+28
+00:01:56,456 --> 00:01:59,506
+PHP homepage. If you don't change it,
+
+29
+00:01:59,528 --> 00:02:03,342
+you'll probably be greeted by the default Apache HTML
+
+30
+00:02:03,406 --> 00:02:06,646
+page which you don't really want. And I
+
+31
+00:02:06,668 --> 00:02:09,830
+think that's all. So let's see, our server is up and running
+
+32
+00:02:09,900 --> 00:02:13,110
+and we can check the website on localhost 80.
+
+33
+00:02:18,410 --> 00:02:22,150
+So it just works. This whole thing
+
+34
+00:02:22,220 --> 00:02:25,954
+was the so called all in one type of deployment
+
+35
+00:02:26,002 --> 00:02:30,234
+architecture, which means basically that all components are installed
+
+36
+00:02:30,402 --> 00:02:33,742
+and run on a single server, which in this case
+
+37
+00:02:33,796 --> 00:02:37,374
+is my virtual centos. Of course this type of
+
+38
+00:02:37,412 --> 00:02:41,226
+architecture is not recommended for a bigger project because you can hardly
+
+39
+00:02:41,258 --> 00:02:44,814
+scale up. And also my server is
+
+40
+00:02:44,852 --> 00:02:48,430
+the single point of failure. So if something bad happens
+
+41
+00:02:48,500 --> 00:02:51,580
+to my pc, well I'm losing my job and my house.
+
