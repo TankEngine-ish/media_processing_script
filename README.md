@@ -4,7 +4,7 @@
 ## Part 1 - Generating captions for your video
 
 
-This simple Python scripts's main purpose is to generate captions for your video file
+This simple Python script's main purpose is to generate captions for your video file
 using Assembly AI's model to understand and transcribe speech. It's actually insanely impressive
 how accurate it is in extracting the words from a voice with heavy accent like mine.
 
